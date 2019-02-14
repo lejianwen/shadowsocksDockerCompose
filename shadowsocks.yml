@@ -1,0 +1,15 @@
+version: '3'
+services:
+  shadowsocks:
+    image: registry.cn-qingdao.aliyuncs.com/lejianwen/shadowsocks
+    command: su daemon -s /bin/bash -c 'ss-server -c /etc/shadowsocks.json'
+    ports:
+      - '52122:52122'
+    volumes:
+      - './shadowsocks.json:/etc/shadowsocks.json'
+    container_name: 'shadowsocks-le'
+
+
+
+
+  
